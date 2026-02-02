@@ -1,5 +1,5 @@
 # 🚀 AI-Powered Task Optimizer
-
+# owner: SrinidhiKolapalli
 
 ## 📌 Project Overview
 
@@ -43,6 +43,7 @@ It includes **real-time emotion detection**, **task recommendations**, **histori
 
 1. **Clone the repository**
 git clone https://github.com/your-username/ai-task-optimizer.git
+
 
 
 
