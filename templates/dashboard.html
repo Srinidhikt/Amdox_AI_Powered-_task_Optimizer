@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Employee Dashboard</title>
+    <style>
+        body { font-family: Arial; background: #f2f2f2; }
+        .container {
+            width: 850px;
+            margin: 60px auto;
+            border: 4px solid black;
+            padding: 50px;
+            background: white;
+        }
+        input[type="text"] {
+            padding: 10px;
+            border: 3px solid black;
+            width: 500px;
+        }
+        button {
+            padding: 10px 30px;
+            border: 3px solid black;
+            background: white;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        li {
+            border-bottom: 1px solid #ccc;
+            padding: 12px 0;
+        }
+        .timestamp {
+            font-size: 12px;
+            color: gray;
+        }
+        .emotions {
+            font-weight: bold;
+            color: #333;
+        }
+        .tasks {
+            color: #007BFF;
+            margin-top: 5px;
+            font-style: italic;
+        }
+        a.logout {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 25px;
+            border: 3px solid black;
+            background: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        h2 { text-align: center; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Welcome, {{ empname }} (ID: {{ empid }})</h2>
+
+    <form method="post">
+        Enter a sentence to analyze emotions:<br><br>
+        <input type="text" name="mood" required>
+        <button>Submit</button>
+    </form>
+
+    <h3>Mood History & Suggestions</h3>
+    {% if moods %}
+    <ul>
+        {% for entry in moods %}
+        <li>
+            <div class="emotions">{{ entry.emotions }}</div>
+            <div class="timestamp">{{ entry.timestamp }}</div>
+            <div class="tasks">Suggested Tasks: {{ ", ".join(entry.tasks) }}</div>
+        </li>
+        {% endfor %}
+    </ul>
+    {% else %}
+        <p>No moods recorded yet.</p>
+    {% endif %}
+
+    <a href="{{ url_for('logout') }}" class="logout">Logout</a>
+</div>
+
+</body>
+</html>
