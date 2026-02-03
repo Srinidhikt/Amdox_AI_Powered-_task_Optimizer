@@ -44,15 +44,12 @@
     </style>
 </head>
 <body>
-
 <div class="container">
     <h2>HR Dashboard</h2>
-
     <div class="graph">
         <h3>Employee Negative Mood Trends</h3>
         <img src="{{ url_for('hr_graph') }}" alt="Mood Graph" width="800">
     </div>
-
     <h3>Employee Mood History</h3>
     {% for empid, info in history.items() %}
         <h4>Employee: {{ info.name }} (ID: {{ empid }}) {% if empid in alerts %}<span class="alert">⚠️ Negative Mood Detected</span>{% endif %}</h4>
@@ -71,9 +68,8 @@
             {% endfor %}
         </table>
     {% endfor %}
-
     <a href="{{ url_for('logout') }}" class="logout">Logout</a>
 </div>
-
 </body>
 </html>
+
