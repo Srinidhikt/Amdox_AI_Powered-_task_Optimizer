@@ -57,16 +57,13 @@
     </style>
 </head>
 <body>
-
 <div class="container">
     <h2>Welcome, {{ empname }} (ID: {{ empid }})</h2>
-
     <form method="post">
         Enter a sentence to analyze emotions:<br><br>
         <input type="text" name="mood" required>
         <button>Submit</button>
     </form>
-
     <h3>Mood History & Suggestions</h3>
     {% if moods %}
     <ul>
@@ -81,9 +78,7 @@
     {% else %}
         <p>No moods recorded yet.</p>
     {% endif %}
-
     <a href="{{ url_for('logout') }}" class="logout">Logout</a>
 </div>
-
 </body>
 </html>
