@@ -1,0 +1,6 @@
+timestamp,emp_id,emp_name,sentence,emotions
+03-02-2026 11:29,0001,nidhi,i feel disappointed,disappointment
+03-02-2026 11:38,0001,nidhi,i feel so happy today i wanna jump in joy,joy
+03-02-2026 11:39,2074,utkarsha,i missed the meeting and i feel sad and disappointed in myself,"sad,disappointment"
+03-02-2026 16:24,emp001,nidhi,i feel so sad today,sad
+03-02-2026 16:24,emp001,nidhi,i feel very happy today,joy
