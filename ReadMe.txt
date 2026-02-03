@@ -69,8 +69,9 @@ Stores complete emotion logs:
 ## 📈 How to Use
 
 1. **Clone the repository**
-git clone https://github.com/Srinidhikt/Amdox_AI_Powered-_task_Optimizer
+git clone https://github.com/Srinidhikt/Amdox_AI_Powered-_task_Optimizer.git
 
 
 
 **Note:** Full datasets are too large for GitHub. Download them [here] https://drive.google.com/drive/folders/1QdvAGOadpfy0QMciGfNxTH2oFKJHnoBv.
+
